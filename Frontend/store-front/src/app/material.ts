@@ -9,7 +9,8 @@ import {
     MatSelectModule,
     MatSlideToggleModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule
    } from '@angular/material';
   import { NgModule } from '@angular/core';
   
@@ -27,7 +28,8 @@ import {
       MatSelectModule,
       MatSlideToggleModule,
       MatListModule,
-      MatDialogModule 
+      MatDialogModule,
+      MatTabsModule 
     ],
     exports: [ 
       MatButtonModule, 
@@ -40,7 +42,8 @@ import {
       MatSelectModule,
       MatSlideToggleModule,
       MatListModule,
-      MatDialogModule
+      MatDialogModule,
+      MatTabsModule
       ]
   })
   

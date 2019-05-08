@@ -34,10 +34,13 @@ public class LoginResource {
 	}
 	
 	@RequestMapping("/checkSession")
-	public ResponseEntity checkSession() {
-		System.out.println(HttpStatus.OK);
-		return new ResponseEntity("Session Active!", HttpStatus.OK);
-	}
+    public ResponseEntity checkSession(HttpSession session, HttpServletRequest request)
+    {
+
+        System.out.print("DENEME DENEME DENEME DENEME DENEME"+HttpStatus.OK);
+
+        return new ResponseEntity("Session Activated!",HttpStatus.OK);
+    }
 	
 	@RequestMapping("/user/logout")
 	public ResponseEntity logout() {

@@ -1,0 +1,8 @@
+package com.bookstore;
+
+public class Initializer extends AbstractHttpSessionApplicationInitializer { 
+
+	public Initializer() {
+		super(Config.class); 
+	}
+}
