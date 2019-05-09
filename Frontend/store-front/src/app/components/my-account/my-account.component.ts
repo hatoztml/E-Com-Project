@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {LoginService} from '../../services/login.service';
 import {UserService} from '../../services/user.service';
-import { AppConst } from '../../constants/app-const';
+import {AppConst} from '../../constants/app-const';
 
 @Component({
   selector: 'app-my-account',
@@ -74,12 +74,12 @@ export class MyAccountComponent implements OnInit {
   	this.userService.retrievePassword(this.recoverEmail).subscribe(
   		res => {
   			console.log(res);
-  			this.emailSent = true;
+  			this.forgetPasswordEmailSent = true;
   		},
   		error => {
   			console.log(error.text());
   			let errorMessage = error.text();
-  			if(errorMessage==="emailExists") this.emailExists=true;
+  			if(errorMessage==="Email not found") this.emailNotExists=true;
   		}
   	);
   }

@@ -10,7 +10,7 @@ import {
     MatSlideToggleModule,
     MatListModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
    } from '@angular/material';
   import { NgModule } from '@angular/core';
   

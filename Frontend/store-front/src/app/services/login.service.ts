@@ -16,7 +16,7 @@ export class LoginService {
   	let basicHeader = "Basic "+encodedCredentials;
   	let headers = new Headers({
   		'Content-Type' : 'application/x-www-form-urlencoded',
-  		'Authoritation' : basicHeader
+  		'Authorization' : basicHeader
   	});
 
   	return this.http.get(url, {headers: headers});
@@ -27,7 +27,7 @@ export class LoginService {
   	let headers = new Headers({
   		'x-auth-token' : localStorage.getItem('xAuthToken')
   	});
-	console.log("Value of token at check Session ",localStorage.getItem('xAuthToken'));
+
   	return this.http.get(url, {headers: headers});
   }
 
