@@ -11,6 +11,7 @@ import {
     MatListModule,
     MatDialogModule,
     MatTabsModule,
+    MatProgressSpinnerModule,
    } from '@angular/material';
   import { NgModule } from '@angular/core';
   
@@ -29,7 +30,8 @@ import {
       MatSlideToggleModule,
       MatListModule,
       MatDialogModule,
-      MatTabsModule 
+      MatTabsModule,
+      MatProgressSpinnerModule 
     ],
     exports: [ 
       MatButtonModule, 
@@ -43,7 +45,8 @@ import {
       MatSlideToggleModule,
       MatListModule,
       MatDialogModule,
-      MatTabsModule
+      MatTabsModule,
+      MatProgressSpinnerModule
       ]
   })
   

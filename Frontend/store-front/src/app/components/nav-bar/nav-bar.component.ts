@@ -7,7 +7,7 @@ import { LoginService } from '../../services/login.service';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  private loggedIn = false;
+  private loggedIn = true;
 
   constructor(
   	private loginService: LoginService
@@ -25,14 +25,6 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit() {
-  	this.loginService.checkSession().subscribe(
-  		res => {
-  			this.loggedIn = true;
-  		},
-  		err => {
-  			this.loggedIn =false;
-  		}
-  	);
   }
 
 }

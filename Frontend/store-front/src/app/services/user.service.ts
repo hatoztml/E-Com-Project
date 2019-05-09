@@ -23,16 +23,16 @@ export class UserService {
   	return this.http.post(url, JSON.stringify(userInfo), {headers : tokenHeader});
   }
 
-  updateUserInfo(user: User, newPassword: string) {
+  updateUserInfo(user: User, newPassword: string, currentPassword: string) {
     let url = this.serverPath + "/user/updateUserInfo";
     let userInfo = {
       "id" : user.id,
       "firstName" : user.firstName,
       "lastName" : user.lastName,
       "username" : user.username,
-      "currentPassword" : user.password,
+      "currentPassword" : currentPassword,
       "email" : user.email,
-      "newPassword" : "newPassword"
+      "newPassword" :newPassword
     };
 
     let tokenHeader = new Headers({
@@ -53,6 +53,17 @@ export class UserService {
   	});
 
   	return this.http.post(url, JSON.stringify(userInfo), {headers : tokenHeader});
+  }
+
+  getCurrentUser() {
+    let url = this.serverPath+'/user/getCurrentUser';
+    
+    let tokenHeader = new Headers({
+      'Content-Type' : 'application/json',
+      'x-auth-token' : localStorage.getItem('xAuthToken')
+    });
+
+    return this.http.get(url, {headers : tokenHeader});
   }
 
 }

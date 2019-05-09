@@ -12,17 +12,17 @@
         <a class="nav-link" routerLink="/bookList">BOOK</a>
       </li>
     </ul>
-    <ul *ngIf="!loggedIn" class="nav navbar-nav navbar-right">    
+    <ul class="nav navbar-nav navbar-right">    
       <li class="nav-item active ">
         <a class="nav-link" routerLink="/myAccount">MY ACCOUNT</a>
       </li>
-      <li *ngIf="loggedIn" class="nav-item active">
+      <li class="nav-item active">
         <a class="nav-link" routerLink="/shoppingCart">SHOPPING CART</a>
       </li>
-      <li *ngIf="loggedIn" class="nav-item active">
+      <li class="nav-item active">
         <a class="nav-link" routerLink="/myProfile">MY PROFILE</a>
       </li>
-      <li *ngIf="loggedIn" class="nav-item active">
+      <li  class="nav-item active">
         <a class="nav-link" (click)="logout()">LOGOUT</a>
       </li>
     </ul>

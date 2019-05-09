@@ -3,7 +3,6 @@ package com.bookstore.resources;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
-import java.security.Principal;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -155,15 +154,5 @@ public class UserResource {
 		return new ResponseEntity("Update Success", HttpStatus.OK);
 	}
 
-	@RequestMapping("/getCurrentUser")
-	public User getCurrentUser(Principal principal) {
-		String username = principal.getName();
-		User user = new User();
-		if (null != username) {
-			user = userService.findByUsername(username);
-		}
-
-		return user;
-	}
 
 }
